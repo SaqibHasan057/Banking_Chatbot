@@ -1,0 +1,80 @@
+intents:
+  - greet
+  - thank
+  - faq
+  - goodbye
+  - balance
+  - lastTransaction
+  - sendMoney
+  - creditCardInquiry
+  - inform
+
+responses:
+  utter_greet:
+  - text: "স্বাগতম। আমি ব্যাংক এশিয়ার চ্যাটবট, আভা ২.০। কিভাবে আজকে আপনাকে সহায়তা করতে পারি?"
+
+  utter_thanks:
+  - text: "আপনাকেও ধন্যবাদ।"
+
+  utter_how_can_help_further:
+  - text: "আর কি ভাবে সাহায্য করতে পারি?"
+
+  utter_goodbye:
+  - text: "ধন্যবাদ আভা ২.০ ব্যবহার করার জন্য। আবার দেখা হবে।"
+
+  utter_ask_accountNumber:
+  - text: আপনার  একাউন্টের ১২ ডিজিট নামবার টা দিন। 
+
+  utter_ask_PIN:
+  - text: আপনার পিন নামবার টা দিন। 
+
+  utter_ask_fromAccountNumber:
+  - text: যেই একাউন্ট থেকে টাকা পাঠাবেন ওই একাউন্টের ১২ ডিজিট নামবার টা দিন। 
+
+  utter_ask_toAccountNumber:
+  - text: যাকে টাকা পাঠাবেন তার একাউন্টের ১২ ডিজিট নামবার টা দিন। 
+
+  utter_ask_amount:
+  - text: যেই টাকা পাঠাবেন সেই টাকার পরিমাণটা ইংরেজী দুই দশমিক দিয়ে লিখুন দিয়ে লিখুন। যেমন, 25000.00।
+
+  utter_ask_creditCardNumber:
+  - text: আপনার ক্রেডিট কার্ডের ১৬ ডিজিট নামবার টা দিন। 
+
+actions:
+  - respond_faq
+
+forms:
+  - balance_inquiry_form
+  - last_transaction_form
+  - send_money_form
+  - credit_card_inquiry_form
+
+
+slots:
+  accountNumber:
+    type: unfeaturized
+  PIN:
+    type: unfeaturized
+  toAccountNumber:
+    type: unfeaturized
+  fromAccountNumber:
+    type: unfeaturized
+  amount:
+    type: unfeaturized
+  creditCardNumber:
+    type: unfeaturized
+
+entities:
+  - accountNumber
+  - PIN
+  - accountNumber2
+  - PIN2
+  - toAccountNumber
+  - fromAccountNumber
+  - amount
+  - PIN3
+  - creditCardNumber
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
